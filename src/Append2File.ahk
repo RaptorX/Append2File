@@ -1,7 +1,7 @@
 #SingleInstance
 #Requires Autohotkey v1.1.33+
 ;--
-;@Ahk2Exe-SetVersion 1.0.0-alpha.1
+;@Ahk2Exe-SetVersion 1.0.0-alpha.2
 ;@Ahk2Exe-SetProductName Append2File
 ;@Ahk2Exe-SetDescription Allows you to append arbitraty strings at the beginning or end of ahk files in a selected folder
 /**
@@ -37,7 +37,7 @@
 
  global script := {base         : script
                  ,name          : regexreplace(A_ScriptName, "\.\w+")
-                 ,version      : "1.0.0-alpha.1"
+                 ,version      : "1.0.0-alpha.2"
                  ,author       : "RaptorX"
                  ,email        : ""
                  ,crtdate      : "July 26, 2022"
@@ -54,6 +54,12 @@
 ;}--
 ;{#Settings
 ;}
+
+try script.Update("https://raw.githubusercontent.com/RaptorX/Append2File/master/ver"
+                 ,"https://github.com/RaptorX/Append2File/releases/download/latest/Append2File.zip")
+Catch err
+	if err.code != 6
+		MsgBox err.msg
 
 Gui, Show
 return
