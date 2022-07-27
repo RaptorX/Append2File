@@ -1,9 +1,9 @@
 #SingleInstance
 #Requires Autohotkey v1.1.33+
 ;--
-;@Ahk2Exe-SetVersion 1.0.0-alpha
-;@Ahk2Exe-SetProductName
-;@Ahk2Exe-SetDescription
+;@Ahk2Exe-SetVersion 1.0.0-alpha.1
+;@Ahk2Exe-SetProductName Append2File
+;@Ahk2Exe-SetDescription Allows you to append arbitraty strings at the beginning or end of ahk files in a selected folder
 /**
  * ============================================================================ *
  * @Author           : RaptorX                                                  *
@@ -11,10 +11,6 @@
  *                                                                              *
  * @Created          : July 26, 2022                                            *
  * @Modified         : July 27, 2022                                            *
- *                                                                              *
- * @Description      :                                                          *
- * -------------------                                                          *
- *                                                                              *
  * ============================================================================ *
  * License:                                                                     *
  * Copyright ©2022 RaptorX <GPLv3>                                              *
@@ -41,7 +37,7 @@
 
  global script := {base         : script
                  ,name          : regexreplace(A_ScriptName, "\.\w+")
-                 ,version      : "1.0.0-alpha"
+                 ,version      : "1.0.0-alpha.1"
                  ,author       : "RaptorX"
                  ,email        : ""
                  ,crtdate      : "July 26, 2022"
