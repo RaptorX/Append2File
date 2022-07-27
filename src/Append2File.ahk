@@ -36,9 +36,12 @@
  */
 
 ;{#Includes
+ #Include <gui\main>
 ;}
 ;{#Directives
 ;}--
 ;{#Settings
 ;}
+
+Gui, Show
 return
