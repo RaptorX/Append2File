@@ -55,5 +55,11 @@
 ;{#Settings
 ;}
 
+try script.Update("https://raw.githubusercontent.com/RaptorX/Append2File/master/ver"
+                 ,"https://github.com/RaptorX/Append2File/releases/download/latest/Append2File.zip")
+Catch err
+	if err.code != 6
+		MsgBox err.msg
+
 Gui, Show
 return
